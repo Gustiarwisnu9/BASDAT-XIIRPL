@@ -1,8 +1,22 @@
 <?php 
-
+// global
 require 'global.php';
 
-echo "{$nama} <br><br>";     
+// statis
+function statis(){
+    static $var = " saya adalah siswa XII RPL";
+    echo $var;
+    $var++;
+}
+statis();
 
+//lokal
+$skill = " desain";
+function lokal(){
+    $skill = " saya bisa coding dan";
+    echo "$skill";
+}
+lokal();
+echo $skill;
 
 ?>

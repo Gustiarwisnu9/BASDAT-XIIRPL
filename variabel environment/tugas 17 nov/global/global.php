@@ -1,4 +1,5 @@
-<?php
-//Global
-$nama = 'Perkenalkan'; // <- Variabel Global
+<?php 
+    // variabel
+    $global = 'perkenalkan'; 
+    echo $global;
 ?>
