@@ -7,12 +7,14 @@
     <title>Kalkulator Saintifik</title>
 </head>
 <body>
+    <div class="container">
     <h1>Kalkulator Saintifik Sederhana</h1>
     <form>
         <input type="text" name="ekspresi">
     <div style="margin-top: 10px">
     <button type="button" onclick="location.href = '?'">Clear</button>
     <button type="submit">Hitung</button>
+    </div>
     </div>
     <!-- Start Count -->
     <?php
