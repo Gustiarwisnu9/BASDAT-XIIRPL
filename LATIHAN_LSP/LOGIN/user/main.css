@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(32,136,163,1) 0%, rgba(37,37,106,1) 0%, rgba(45,51,126,1) 0%, rgba(69,91,184,1) 50%, rgba(30,184,224,1) 100%, rgba(16,0,255,1) 100%);
+}
+table {
+    border-radius: 10px;
+    border-width: 3px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    width:900px;
+    height: 410px;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+button {
+     width: 70px;
+     margin-bottom: 10px;
+     padding-left: -10px;
+     outline: none !important;
+}
+
+h1 {
+    width:500px;
+    border-radius: 10px;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}

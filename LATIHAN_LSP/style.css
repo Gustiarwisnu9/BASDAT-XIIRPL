@@ -1,0 +1,39 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    outline: 0;
+}
+body {
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    align-items: center ;
+    word-spacing: 3px;
+    height: 100vh;
+    background: radial-gradient(circle at top left, #fdbb2d, #22c1c3);   
+    background-size: cover;
+    background-position: center;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 20%);
+    padding: 20px 25px;
+    width: 450px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+table {
+    margin: auto;
+    margin-top: 10px;
+    border-width: 5px;
+    border-radius: 10px;
+}
+.databuku {
+    margin-top: 50px;
+}
