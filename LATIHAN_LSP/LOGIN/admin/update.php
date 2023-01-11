@@ -53,6 +53,10 @@
             <br>
             <input type="text" name="penerbit" value="<?php echo $meledak['penerbit']; ?>">
             <br>
+            <label>Harga</label>
+            <br>
+            <input type="nubmer" name="harga" value="<?php echo $meledak['harga']; ?>">
+            <br>
             <br>
             <input type="submit" value="submit">
             <input type="reset" value="cancel">

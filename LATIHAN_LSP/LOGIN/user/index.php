@@ -1,39 +1,40 @@
 <html>
     <head>
         <title>User Page</title>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="style2.css">
     </head>
     <body>
         <center>
-        <h1>Selamat Datang Di Index</h1>
+        <h1 class="judul">Selamat Datang di Index</h1>
+        <div class="kotak">
+        <div class="kotak2">
         <h3>Halaman Anggota</h3>
 
+        
         <!-- cek halaman apakah sudah login atau belum -->
         
         <?php
-        session_start();
-        if($_SESSION['status']!='login'){
-            header('location:login.php?pesan=belum_login');
+            session_start();
+            if($_SESSION['status']!='login'){
+                header("location:login.php?pesan=belum_login");
+            }
+            ?>
+            
+        <!-- END -->
+        
+        <h4>Welcome <?php 
+        
+        include '../koneksi_db.php';
+        $email = $_SESSION['email'];
+        $anggota = mysqli_query($koneksi, "select * from anggota where email = '$email'");
+        foreach($anggota as $nama){
+            echo $nama['nama'];
         }
-        ?>
-        <h4>Welcome <?php
-         include '../koneksi_db.php';
-         $email = $_SESSION['email'];
-         $anggota = mysqli_query($koneksi, "select * from anggota where email = '$email'" );
-         foreach($anggota as $nama){
-            echo $nama ['nama'];
-         }
-         ?> anda telah login </h4>
+        ?> anda telah login</h4>
 
-         <!-- end -->
-        <html>
-    <head>
-        <title>show data</title>
-    </head>
-        <div class="databuku">
-        <h1>DATA BUKU</h1>
+        <button><a href="update-anggota.php?id_anggota=<?php  echo $nama['id_anggota']?>">Customize</a></button>
+        
         <table border="1">
-                
             <tr>
             <th>id_buku</th>
             <th>id katalog</th>
@@ -41,6 +42,7 @@
             <th>pengarang</th>
             <th>tahun terbit</th>
             <th>penerbit</th>
+            <th>Aksi</th>
         </tr>
         <!-- menampilkan data buku -->
         <?php
@@ -53,14 +55,21 @@
             echo "<td>".$katalog = $row['id_katalog']."</td>";
             echo "<td>".$judul = $row['judul_buku']."</td>";
             echo "<td>".$pengarang = $row['pengarang']."</td>";
-            echo "<td>".$thn_terbit = $row['thn_terbit']."</td>";
             echo "<td>".$penerbit = $row['penerbit']."</td>";
+            echo "<td>".$thn_terbit = $row['thn_terbit']."</td>";
+        
+        ?>
+
+        <td><a href="keranjang.php?id_buku=<?php echo $row['id_buku'] ?>">Add to Cart</a></td>
+        
+        <?php
         echo "</tr>";
-    }
-    ?>
-    </table>
-    <br>
-        <a href="../logout.php">LOGOUT</a>
+        }
+        ?>
+        </table>
+        <br>
+        <a href="../logout.php">Logout</a>  
+        </div>
         </center>
     </body>
 </html>

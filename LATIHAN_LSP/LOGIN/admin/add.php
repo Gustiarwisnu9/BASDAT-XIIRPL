@@ -54,6 +54,10 @@
             <br>
             <input type="text" name="penerbit">
             <br>
+            <label>Harga</label>
+            <br>
+            <input type="number" name="harga">
+            <br>
             <br>
             <input type="submit" value="submit">
             <input type="reset" value="cancel">

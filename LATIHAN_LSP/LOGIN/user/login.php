@@ -40,6 +40,7 @@
     <center>
         <div class="user">
     <h1>USER ACCESS</h1>
+    
     <img src="profile-user.png">
     <form action="proses.php" method="post">
         <table>
@@ -61,7 +62,8 @@
             <tr>
                 <td>admin klik <a href="../admin/">sini</a></td>
             </tr>
-        </table>
+            </table>
+            <h4>Anda belum punya akun ? Daftar <a href="daftar.php">Disini</a></h4>
     </form>
     </div>
 </center>

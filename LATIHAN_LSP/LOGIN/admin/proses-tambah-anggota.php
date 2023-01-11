@@ -19,11 +19,16 @@ if($input){
         alert('data berhasil ditambahkan');
         window.location = "index.php";
     </script>
+    <?php
 }else{
+    ?>
     <script>
          alert('data gagal ditambahkan');
         window.location = "index.php";
     </script>
     <?php
 }
+
+// mengalhkan ke tampilan awal yah
+header("location:index.php"); 
 ?>
